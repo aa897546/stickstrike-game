@@ -57,4 +57,7 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 & $git @gitArgs push -u origin $branch
+if ($LASTEXITCODE -ne 0) {
+    throw "GitHub push failed. Check the network connection and run gh auth setup-git before retrying."
+}
 Write-Host "Updated: https://github.com/aa897546/stickstrike-pygame/tree/$branch"
