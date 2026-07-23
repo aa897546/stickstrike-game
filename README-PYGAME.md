@@ -21,8 +21,21 @@ python main.py
 
 - `A` / `D` or arrow keys: move
 - `W` or Up: jump
-- `J` or Space: light attack
+- `J`: light punch
+- `K`: heavy punch
+- `U`: light kick
+- `I`: heavy kick
+- `L` or Right Shift: guard
+- `O`: ultimate attack when the gold meter is full
 - `Esc`: pause
+
+## Combos
+
+- `J, J, K`: Rapid Break
+- `U, U, I`: Cyclone Kick
+- `J, U, K`: Neon Finish
+
+Enter each sequence quickly before the combo window expires.
 
 ## Publish updates
 

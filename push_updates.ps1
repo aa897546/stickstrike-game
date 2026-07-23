@@ -1,7 +1,7 @@
 $ErrorActionPreference = "Stop"
 
 $repoUrl = "https://github.com/aa897546/stickstrike-game.git"
-$branch = "agent/pygame-game-updates"
+$branch = "addfuntion"
 $files = @("main.py", "requirements.txt", "README-PYGAME.md", ".gitignore", "push_updates.ps1")
 
 $gitCommand = Get-Command git -ErrorAction SilentlyContinue
@@ -60,4 +60,12 @@ if ($LASTEXITCODE -ne 0) {
 if ($LASTEXITCODE -ne 0) {
     throw "GitHub push failed. Check the network connection and run gh auth setup-git before retrying."
 }
-Write-Host "Updated: https://github.com/aa897546/stickstrike-game/tree/$branch"
+
+$headSha = & $git @gitArgs rev-parse HEAD
+& $git @gitArgs branch -f main $headSha
+& $git @gitArgs push -u origin main
+if ($LASTEXITCODE -ne 0) {
+    throw "The addfuntion branch was pushed, but the main branch push failed."
+}
+
+Write-Host "Updated addfuntion and main: https://github.com/aa897546/stickstrike-game"
