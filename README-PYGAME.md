@@ -9,6 +9,11 @@ A neon stick-figure fighting game built with Pygame.
 - Multi-round matches
 - Character colors, head shapes, aura, and headband customization
 - Main menu, options, pause, restart, and rematch flows
+- Instant interface switching across 16 languages
+- Generated background music and combat sound effects
+- Separate music and sound-effect volume controls
+- Language-aware system-font selection for CJK, Arabic, Hindi, Thai, Cyrillic, and Latin scripts
+- Custom music loading from the `music/` folder (WAV, OGG, or MP3)
 
 ## Run
 

@@ -2,7 +2,7 @@ $ErrorActionPreference = "Stop"
 
 $repoUrl = "https://github.com/aa897546/stickstrike-game.git"
 $branch = "addfuntion"
-$files = @("main.py", "requirements.txt", "README-PYGAME.md", ".gitignore", "push_updates.ps1")
+$files = @("main.py", "requirements.txt", "README-PYGAME.md", ".gitignore", "push_updates.ps1", "music")
 
 $gitCommand = Get-Command git -ErrorAction SilentlyContinue
 $bundledGit = "C:\Users\au604\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\git\cmd\git.exe"
